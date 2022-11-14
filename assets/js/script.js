@@ -1,7 +1,7 @@
 /* Author: 
 Inayatullah
 */
-
+//load more js start
 let dataList = document.querySelector('.display-list'),
     loadBtn = document.querySelector('.load-btn');
 let userData,
@@ -19,7 +19,7 @@ function requestAPI() {
                 throw this.status + ":" + this.statusText;
             }
         } catch (error) {
-            console.log(error);
+            alert(error);
         };
     };
     xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts');
@@ -35,7 +35,6 @@ function appendData() {
         let result = userData[i];
         const list = document.createElement('li');
         list.className = "data-item";
-        // console.log(result.id);
         list.innerHTML = `<ul class="data">
         <li class="userid">${result.id}</li>
         <li class="title">${result.title}</li>
@@ -52,7 +51,7 @@ function appendData() {
 }
 
     loadBtn.addEventListener('click',appendData);
-
+//load more js start
 
 
 
