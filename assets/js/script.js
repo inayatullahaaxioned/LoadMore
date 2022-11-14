@@ -19,7 +19,7 @@ function requestAPI() {
                 throw this.status + ":" + this.statusText;
             }
         } catch (error) {
-            alert(error);
+            console.log(error);
         };
     };
     xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts');
